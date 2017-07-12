@@ -1,22 +1,24 @@
 <!DOCTYPE html>
+<html>
+	<head>
+		<title><%= title =%></title>
+		<link rel="stylesheet" type="text/css" href="/css/normalize.css"/>
+		<link rel="stylesheet" type="text/css" href="/css/skeleton.css"/>
+		<link rel="stylesheet" type="text/css" href="/css/style.css"/>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-<link rel="stylesheet" type="text/css" href="/css/normalize.css"/>
-<link rel="stylesheet" type="text/css" href="/css/skeleton.css"/>
-<link rel="stylesheet" type="text/css" href="/css/style.css"/>
+	</head>
+	<body>
+		<form method="post">
+				<h1>Signup</h1>
+			<% if (typeof error !== "undefined") { %>
+				<div class="error"><%= error %></div>
+				<% } %>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-
-<form method="post">
-	<h1>Signup</h1>
-
-	<% if (typeof error !== "undefined") { %>
-		<div class="error"><%= error %></div>
-	<% } %>
-
-	<input type="text" name="username" placeholder="Username"/>
-	<input type="password" name="password" placeholder="Password"/>
-	<button>Submit</button>
-</form>
-
+				<input type="text" name="username" placeholder="Username"/>
+				<input type="password" name="password" placeholder="Password"/>
+				<button>Submit</button>
+		</form>
+	</body>
+</html>
 <!-- <script src="/js/signup.js"></script> -->

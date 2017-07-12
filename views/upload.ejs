@@ -1,19 +1,23 @@
 <!DOCTYPE html>
+<html>
+	<head>
+		<title>Upload A Picture - Snapagram</title>
 
-<link rel="stylesheet" type="text/css" href="/css/normalize.css"/>
-<link rel="stylesheet" type="text/css" href="/css/skeleton.css"/>
-<link rel="stylesheet" type="text/css" href="/css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="/css/normalize.css"/>
+		<link rel="stylesheet" type="text/css" href="/css/skeleton.css"/>
+		<link rel="stylesheet" type="text/css" href="/css/style.css"/>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-<body>
-	<form class="upload" enctype="multipart/form-data" method="post">
-		<% if (typeof error !== "undefined") { %>
-			<p class="upload-error">
-				<%- error %>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<form class="upload" enctype="multipart/form-data" method="post">
+			<% if (typeof error !== "undefined") { %>
+				<p class="upload-error">
+					<%- error %>
 			</p>
-		<% } %>
-		<input type="file" name="file"/>
-		<button>Upload</button>
-	</form>
-</body>
+			<% } %>
+			<input type="file" name="file"/>
+			<button>Upload</button>
+		</form>
+	</body>
+</html>

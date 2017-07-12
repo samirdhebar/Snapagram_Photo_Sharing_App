@@ -1,19 +1,22 @@
 <!DOCTYPE html>
-
-<link rel="stylesheet" type="text/css" href="/css/normalize.css"/>
-<link rel="stylesheet" type="text/css" href="/css/skeleton.css"/>
-<link rel="stylesheet" type="text/css" href="/css/style.css"/>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-
-<div class="photo-file">
-	<h1><%- file.get("originalName") %></h1>
-	<% if (file.getPreviewSrc()) { %>
-		<img class="photo-preview" src="<%- file.getPreviewSrc() %>"/>
-	<% } else { %>
+<html>
+	<head>
+		<title>Photo Files - Snapagram</title>
+		<link rel="stylesheet" type="text/css" href="/css/normalize.css"/>
+		<link rel="stylesheet" type="text/css" href="/css/skeleton.css"/>
+		<link rel="stylesheet" type="text/css" href="/css/style.css"/>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<div class="photo-file">
+			<h1><%- file.get("originalName") %></h1>
+			<% if (file.getPreviewSrc()) { %>
+				<img class="photo-preview" src="<%- file.getPreviewSrc() %>"/>
+				<% } else { %>
 		<div class="photo-preview noPreview">No preview available</div>
-	<% } %>
+		<% } %>
 
-	<a class="photo-download button" href="/docs/download/<%- file.get('id') %>">Download</a>
-</div>
+		<a class="photo-download button" href="/docs/download/<%- file.get('id') %>">Download</a>
+		</div>
+	</body>
+</html>
