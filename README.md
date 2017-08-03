@@ -1,4 +1,4 @@
-# Snapagram - Photo Sharing Application
+# Snapagram - Photo Sharing Application [![MIT license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/samirdhebar/photo-sharing-app/master/LICENSE.md)
 A group project between [@samirdhebar](https://github.com/samirdhebar) and [@GabeSArn](https://github.com/GabeSArn). A photo sharing application that allows users to comment on, like and upload pictures.
 
 ## Installation Instructions
@@ -67,3 +67,6 @@ A group project between [@samirdhebar](https://github.com/samirdhebar) and [@Gab
 
 ### Inspiration:
 * [Instagram](https://www.instagram.com)
+
+## License
+* This Instagram-inspired project is available the under the [MIT License](https://github.com/samirdhebar/Price-Buzz/blob/master/LICENSE.md).
