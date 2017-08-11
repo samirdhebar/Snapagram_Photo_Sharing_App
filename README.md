@@ -63,12 +63,18 @@ A group project between [@samirdhebar](https://github.com/samirdhebar) and [@Gab
 ```
 
 
-### Stuff used to make this:
+## Stuff used to make this:
 
  * [Markdown Editor](https://github.com/jbt/markdown-editor) for Github-flavored Markdown editing
 
-### Inspiration:
+## Inspiration:
 * [Instagram](https://www.instagram.com)
+
+
+## Contribute
+
+Contributions are always welcome!
+Please read the [contribution guidelines](Contributing.md) first.
 
 ## License
 * This Instagram-inspired project is available the under the [MIT License](https://github.com/samirdhebar/Price-Buzz/blob/master/LICENSE.md).
