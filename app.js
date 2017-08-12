@@ -54,7 +54,8 @@ app.get("/signup", function(req,res) {
 app.post("/signup", function(req,res) {
 	User.signup(req).then(function(user) {
 		if (user) {
-			res.redirect("/test");
+			// Changed from "/test" //
+			res.redirect("/upload");
 		}
 		else {
 			res.redirect("signup");
@@ -79,7 +80,8 @@ app.get("/login", function(req,res) {
 app.post("/login", function(req,res) {
 	User.login(req,res).then(function(user) {
 		if (user) {
-			res.redirect("test");
+			// Changed from "/test" //
+			res.redirect("upload");
 		} else {
 			res.redirect("404");
 		}
@@ -107,7 +109,7 @@ app.get("/test", function(req,res) {
 
 
 app.get("/photos", function(req,res) {
-	Photo.findAll({ limit: 7, order: [['updatedAt', 'DESC']]}).then(function(photos) {
+	Photo.findAll({ limit: 10, order: [['updatedAt', 'DESC']]}).then(function(photos) {
 		console.log(photos);
 		res.render("photos", {
 			photos: photos,
