@@ -1,15 +1,15 @@
 /* globals $ */
-
 $(document).ready(function() {
-	var $loginForm = $("#login-form");
-	var $username = $loginForm.find("[name=username]");
-	var $password = $loginForm.find("[name=password]");
 
-	// Handle form login by POSTing to /api/login
+	let $loginForm = $('login-form');
+	let $username = $loginForm.find("[name = username]");
+	let $password = $loginForm.find("[name = password]");
+
 	$loginForm.on("submit", function(ev) {
 		ev.preventDefault();
-		var username = $username.val();
-		var password = $password.val();
+
+		let username = $username;
+		let password = $password;
 
 		if (!username) {
 			return alert("Username is required!");
@@ -26,10 +26,10 @@ $(document).ready(function() {
 				password: password,
 			},
 			success: function() {
-				window.location = "/photos";
+				window.location = "/";
 			},
 			error: function() {
-				alert("Login failed, please fix username and/or password");
+				alert("Signup failed. Have you filled in all the fields correctly?");
 			},
 		});
 	});

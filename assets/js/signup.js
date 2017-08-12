@@ -1,36 +1,36 @@
 /* globals $ */
+$document.ready(function() {
 
-$(document).ready(function() {
-	var $loginForm = $("#login-form");
-	var $username = $loginForm.find("[name=username]");
-	var $password = $loginForm.find("[name=password]");
+    let $signupForm = $('signup-form');
+    let $username = $signupForm.find("[name = username]");
+    let $password = $signupForm.find("[name = password]");
 
-	// Handle form login by POSTing to /api/login
-	$loginForm.on("submit", function(ev) {
-		ev.preventDefault();
-		var username = $username.val();
-		var password = $password.val();
+$signupForm.on("submit", function(ev) {
+    ev.preventDefault();
 
-		if (!username) {
-			return alert("Username is required!");
-		}
+    let username = $username;
+    let password = $password;
 
-		if (!password) {
-			return alert("Password is required!");
-		}
+    if(!username) {
+        return alert("Username is required!");
+    }
 
-		$.ajax("/api/login", {
-			method: "POST",
-			data: {
-				username: username,
-				password: password,
-			},
-			success: function() {
-				window.location = "/";
-			},
-			error: function() {
-				alert("Signup failed, please fix username and/or password");
-			},
-		});
-	});
+    if (!password) {
+        return alert("Password is required!");
+    }
+
+    $.ajax("/api/signup", {
+        method: "POST",
+        data: {
+            username: username,
+            password: password,
+        },
+        success: function() {
+            window.location = "/";
+        },
+        error: function() {
+            alert("Signup failed. Have you filled in all the fields correctly?");
+        },
+        });
+    });
 });
