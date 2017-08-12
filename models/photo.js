@@ -1,8 +1,8 @@
 const Sequelize = require("sequelize");
-const sql = require("../util/sql.js");
+const sql = require("../utility/sql.js");
 const User = require("./user.js");
 const Like = require("./like.js");
-const Jimp = require("jimp"); //
+const Jimp = require("jimp");
 const Comment = require("./comment.js");
 const fs = require("fs");
 const session = require("express-session");
@@ -10,6 +10,7 @@ const session = require("express-session");
 const Photo = sql.define("photo", {
 	id: {
 		type: Sequelize.INTEGER,
+		autoIncrement: true,
 		primaryKey: true,
 	},
 	size: {
@@ -25,7 +26,7 @@ const Photo = sql.define("photo", {
 		notNull: true,
 
 	description: {
-		type: Sequelize.STRING(150),
+		type: Sequelize.STRING(250),
 	},
 	filename: {
 		type: Sequelize.STRING,

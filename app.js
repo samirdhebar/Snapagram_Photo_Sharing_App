@@ -7,9 +7,9 @@ const connectSessionSequelize = require("connect-session-sequelize");
 const User = require("./models/user.js");
 const Photo = require("./models/photo.js");
 
-const sql = require("./util/sql.js");
-const snapagramRouter = require("./routes/snapagram.js");
-const renderTemplate = require("./util/renderTemplate.js");
+const sql = require("./utility/sql.js");
+// const snapagramRouter = require("./routes/snapagram.js");
+const renderTemplate = require("./utility/renderTemplate.js");
 const multer  = require('multer');
 const upload = multer({ dest: 'assets/uploads/' });
 

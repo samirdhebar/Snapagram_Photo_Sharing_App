@@ -1,14 +1,14 @@
+const sql = require("../utility/sql");
+const bcrypt = require("bcrypt");
 const Sequelize = require("sequelize");
-const sql = require("../util/sql.js");
-const Photo = require("./photo.js");
-const Comment = require("./comment.js");
-const Jimp = require("jimp"); // An image processing library for Node written entirely in JavaScript
-const bcrypt = require("bcrypt"); // Password hashing
-const fs = require("fs-extra"); // Adds extra file system methods
-const BodyParser = 	require("body-parser");
-const path = require("path");
+const fs = require("fs-extra");
 
-// Password Hashing
+const Photo = require("./photo");
+const Comment = require("./comment");
+const path = require("path");
+const Jimp = require("jimp");
+const BodyParser = require("body-parser");
+
 function hashUserPassword(user) {
 	if (user.password) {
 		return bcrypt.genSalt()
@@ -20,6 +20,7 @@ function hashUserPassword(user) {
 			});
 	}
 }
+
 
 const User = sql.define("user", {
 	id: {
@@ -33,7 +34,7 @@ const User = sql.define("user", {
 		unique: true,
 	},
 	password: {
-		type: Sequelize.STRING(5000),
+		type: Sequelize.STRING(1000),
 		notNull: true,
 	},
 }, {
@@ -43,10 +44,10 @@ const User = sql.define("user", {
 	},
 });
 
-User.hasMany(Photos);
+User.hasMany(Photo);
 User.hasMany(Comment);
 Comment.belongsTo(User);
-Photos.belongsTo(User);
+Photo.belongsTo(User);
 
 User.signup = function(req) {
 	return User.create({
@@ -126,6 +127,7 @@ User.prototype.upload = function(file, req, res) {
 		.then(function() {
 			return photo;
 		});
+
 };
 
 module.exports = User;

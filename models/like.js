@@ -1,5 +1,5 @@
 const Sequelize = require("sequelize");
-const sql = require("../util/sql.js");
+const sql = require("../utility/sql.js");
 const User = require("./user.js");
 const Photo = require("./photo.js");
 
