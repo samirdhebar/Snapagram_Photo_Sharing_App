@@ -1,4 +1,4 @@
-<img src="camera.png" align="right" />
+<img src="/assets/css/images/camera.png" align="right" />
 
 # Snapagram - Photo Sharing Application [![MIT license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/samirdhebar/photo-sharing-app/master/LICENSE.md)
 A group project between [@samirdhebar](https://github.com/samirdhebar) and [@GabeSArn](https://github.com/GabeSArn). A photo sharing application that allows users to comment on, like and upload pictures.
