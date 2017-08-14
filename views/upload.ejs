@@ -21,12 +21,14 @@
 
 <body class = "text-center">
 	<form class="upload" enctype="multipart/form-data" method="post">
+
 		<% if (typeof error !== "undefined") { %>
 			<p class="upload-error">
 				<%- error %>
 			</p>
 		<% } %>
-		<input type="file" name="file"/>
+		<input class="file" type="file" name="file"/>
+    <textarea name="description" rows="8" cols="80" placeholder="Please Enter A Description"></textarea>
 		<button class= "btn-group">Upload</button>
 	</form>
 
