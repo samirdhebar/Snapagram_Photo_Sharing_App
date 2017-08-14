@@ -1,0 +1,14 @@
+<!DOCTYPE ejs>
+
+
+<div class="document">
+
+	<% if (photo.getPreviewSrc()) { %>
+		<img class="document-preview" src="<%- photo.getPreviewSrc() %>"/>
+	<% } else { %>
+		<div class="document-preview noPreview">No preview available</div>
+	<% } %>
+	<h5><%- photo.get("description") %></h5>
+
+	<a href="/photo/gallery"><button class="button" id="gallery">Gallery</button></a>
+</div>
