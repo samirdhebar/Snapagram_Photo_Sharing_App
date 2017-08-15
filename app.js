@@ -93,6 +93,7 @@ app.get("/upload", requireLoggedIn, function(req, res) {
 });
 
 app.post("/upload", requireLoggedIn, upload.single('file'), function(req,res,next) {
+	console.log("APP.JS 8==========D");
 	Photo.make(req).then(function() {
 		res.redirect("/photos");
 	});

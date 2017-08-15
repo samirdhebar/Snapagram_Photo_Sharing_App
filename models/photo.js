@@ -23,9 +23,10 @@ const Photo = sql.define("photo", {
 	mimeType: {
 		type: Sequelize.STRING,
 		notNull: true,
-
+	},
 	description: {
-		type: Sequelize.STRING(250),
+		type: Sequelize.STRING,
+		notNull: true
 	},
 	filename: {
 		type: Sequelize.STRING,
@@ -35,7 +36,6 @@ const Photo = sql.define("photo", {
 		type: Sequelize.INTEGER,
 		notNull: true,
 	}
-	},
 
 });
 
@@ -43,6 +43,7 @@ Photo.make = function(req) {
  	return Photo.create({
  		id: req.file.filename,
  		size: req.file.size,
+		description: req.body.description,
  		originalName: req.file.originalname,
  		mimeType: req.file.mimetype,
 		userId: req.session.userid,
