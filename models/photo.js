@@ -9,8 +9,7 @@ const session = require("express-session");
 
 const Photo = sql.define("photo", {
 	id: {
-		type: Sequelize.INTEGER,
-		autoIncrement: true,
+		type: Sequelize.STRING,
 		primaryKey: true,
 	},
 	size: {
