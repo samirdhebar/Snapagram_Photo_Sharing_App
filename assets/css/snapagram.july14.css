@@ -3018,6 +3018,57 @@ button.list-group-item-danger {
   list-style: none;
   border-radius: 0px; }
 
+.page-link-home {
+  position: relative;
+  max-width: 155px;
+  /*padding-left: 500px;
+  margin-left: 500px;
+  margin: 0 auto;*/
+  display: block;
+  padding: 0.5rem 0.75rem;
+  margin-left: -1px;
+  line-height: 1.25;
+  color: #00b0eb;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+.uploaded-text {
+  /*color: black;
+  margin: 0 auto;*/
+}
+
+.page-link-upload {
+  position: relative;
+  max-width: 155px;
+  /*padding-left: 500px;
+  margin-left: 500px;
+  margin: 0 auto;*/
+  display: block;
+  padding: 0.5rem 0.75rem;
+  margin-left: -1px;
+  line-height: 1.25;
+  color: #00b0eb;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+.page-link-logout {
+  position: relative;
+  max-width: 155px;
+  /*padding-left: 500px;
+  margin-left: 500px;
+  margin: 0 auto;*/
+  display: block;
+  padding: 0.5rem 0.75rem;
+  margin-left: -1px;
+  line-height: 1.25;
+  color: #00b0eb;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+
 .page-item:first-child .page-link {
   margin-left: 0;
   border-top-left-radius: 0px;
@@ -3042,6 +3093,10 @@ button.list-group-item-danger {
 
 .page-link {
   position: relative;
+  max-width: 155px;
+  /*padding-left: 500px;
+  margin-left: 500px;
+  margin: 0 auto;*/
   display: block;
   padding: 0.5rem 0.75rem;
   margin-left: -1px;
@@ -3499,7 +3554,8 @@ input[type="month"] {
 
 textarea {
   overflow: auto;
-  resize: vertical; }
+  resize: vertical;
+  text-align: center;}
 
 fieldset {
   min-width: 0;

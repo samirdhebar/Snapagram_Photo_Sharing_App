@@ -18,9 +18,9 @@
 
 
 			<div class = "navbar-nav">
-			<a href = "/photos" class = "page-link">Home</a>
-			<a href = "/upload" class="page-link">Upload Something</a>
-			<a href = "/" class = "page-link">Logout</a>
+			<a href = "/photos" class = "page-link-home">Home</a>
+			<a href = "/upload" class="page-link-upload">Upload Something</a>
+			<a href = "/" class = "page-link-logout">Logout</a>
 	</div>
 	<div class = "container">
 		<div class = "photos">
@@ -28,9 +28,9 @@
 				<% for (let i = 0; i < photos.length; i++) { %>
 					<a href = "/uploads/<%- photos[i].get('id') %>">
 						<img class= "gallery-image" src = "/uploads/<%- photos[i].get('id') %>"/>
-					<a>
+					<a class="uploaded-text">
 						<p>
-							<%= photos[i].get('description') %> 
+							<%= photos[i].get('description') %>
 						</p>
 					<% } %>
 			</p>
