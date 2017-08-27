@@ -1,10 +1,8 @@
-function requiredLoggedOut (req, res, next) {
-        if (req.user && req.path !== "/logout") {
-                res.redirect("/photos");
-        }
-        else {
-                  next();
-        }
-}
+function requireLoggedOut(req, res, next){
+	if(req.user && req.user.path !== "/logout") {
 
-module.exports = requiredLoggedOut;
+		//To be updated once the default state of logged in user is deciphered
+		res.redirect("/user");
+	}
+	next();
+}
