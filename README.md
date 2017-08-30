@@ -1,4 +1,4 @@
-<img src="/assets/css/images/camera.png" align="right" />
+<img src="/assets/app-images/camera.png" align="right" />
 
 # Snapagram --- Photo Sharing Application [![MIT license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/samirdhebar/photo-sharing-app/master/LICENSE.md)
 A group project between [Samir Dhebar](https://github.com/samirdhebar) and [Gabe Arnold](https://github.com/GabeSArn). A photo sharing application that allows users to comment on, like and upload pictures.
@@ -58,14 +58,14 @@ installed, there is only one command:
 
 
 ## Technology Used
-<img src="assets/css/images/node.png" align= "center" /> <br><br>  
+<img src="assets/app-images/node.png" align= "center" /> <br><br>  
 * Node is a multi-platform, open-source Javascript run-time environment that executes code on the server-side.
 <br><br>
 
-<img src="assets/css/images/express.png" align="left" /> <br><br>
+<img src="assets/app-images/express.png" align="left" /> <br><br>
 * Express is a web application framework for Node.js which acts as its de facto standard server framework
 <br><br>
-<img src="assets/css/images/postgres.png" align="left" /> <br><br><br><br>
+<img src="assets/app-images/postgres.png" align="left" /> <br><br><br><br>
 * PostgreSQL is an object-relational database management system which stores and fetches data securely in response to requests from other software applications.
 <br>
 
