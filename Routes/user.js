@@ -1,9 +1,7 @@
-
 const express = require("express");
 const User = require("../models/users.js");
-const renderUserTemp = require("../utility/renderauth.js");
 const requireLoggedOut = require("../middleware/requireLoggedOut");
-
+const renderUserTemp = require("../utility/renderauth.js");
 const router = express.Router();
 // router.use(requireLoggedOut);
 
