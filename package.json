@@ -1,6 +1,6 @@
 {
   "name": "photo-sharing-app",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A group project between [@samirdhebar](https://github.com/samirdhebar) and [@GabeSArn](https://github.com/GabeSArn). A photo sharing application that allows users to comment on, like and upload pictures.",
   "main": "app.js",
   "scripts": {
