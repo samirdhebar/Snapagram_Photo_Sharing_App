@@ -1,0 +1,25 @@
+
+<form class = "Form" method="post">
+	<% if(typeof error !== undefined) { %>
+		<div class= "error"><%= error %></div>
+	<%}%>
+	<div class="username">
+		Username
+	</div>
+		<input class="login-username" type="text" name = "username"
+		placeholder="Please Enter Your Username"></input><br>
+
+
+	<div class="password">
+		Password
+	</div>
+		<input class="login-password" type="password" name = "password"
+		placeholder="Please Enter Your Password"></input><br>
+
+
+	<button class="submit">Submit</button>
+
+</form>
+
+
+<script scr = "/assets/login.js"></script>
