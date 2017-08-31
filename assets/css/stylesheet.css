@@ -8,36 +8,48 @@
 
 .message {
 	text-align: center;
-	margin: 150px auto;
-	height: 200px;
+	margin: 110px auto;
+	height: 125px;
+	margin-bottom: 100px;
 	width: 600px;
-	font-size: 45px;
+	font-size: 100px;
 	text-shadow: 0px 0px 18px rgba(0,0,0,0.9);
-	color: white;
+	color: #f4bece;
+	text-shadow:
+	1px 0px 1px #45565c, 0px 1px 1px #eee,
+	2px 1px 1px #45565c, 1px 2px 1px #eee,
+	3px 2px 1px #45565c, 2px 3px 1px #eee,
+	4px 3px 1px #45565c, 3px 4px 1px #eee,
+	5px 4px 1px #45565c, 4px 5px 1px #eee,
+	6px 5px 1px #45565c, 5px 6px 1px #eee,
+	7px 6px 1px #45565c;
 }
+
 
 /* ERROR PAGE TEXT
 **
 ***/
 
-.error {
-    color:  #4fabc9;
-    text-shadow: 0px 0px 18px rgba(0,0,0,0.9);
+.errorh1 {
+    color: black;
+		margin-top: 100px;
+    /*text-shadow: 0px 0px 18px rgba(0,0,0,0.9);*/
 		text-align: center;
 }
 
-.errorphoto {
-	object-fit: contain;
-	height: auto;
-	width: 33%;
-	opacity: 0.3px;
-	-webkit-animation:spin 3s linear infinite;
+.errorgif {
+	bottom: 0;
+	object-fit: cover;
+	height: 100%;
+	width: 100%;
+	/*opacity: 0.9px;*/
+	/*-webkit-animation:spin 3s linear infinite;
 	 -moz-animation:spin 3s linear infinite;
 	 animation:spin 3s linear infinite;
 	}
 	@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
 	@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
-	@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); }
+	@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); }*/
 }
 
 /* TEMPLATE
@@ -63,13 +75,13 @@
 }
 
 .template-header {
-	background-color: #191919;
+	/*background-color: #191919;*/
 	width: 100%;
 	height: 6%;
-	opacity: 0.6;
+	/*opacity: 0.6;*/
 	text-align: right;
 	padding: 10px 10px 10px 10px;
-	color: white;
+	color: #0FA0CE;
 	position: fixed;
 }
 
@@ -83,6 +95,7 @@
 
 #signup {
 	background-color: #426842;
+
 	color: white;
 }
 
@@ -102,7 +115,7 @@ i {
 	padding-left: 5px;*/
 }
 
-.photomatic {
+.snapagram {
 	float: left;
 	font-weight: bolder;
 	padding-left: 10px;
@@ -116,9 +129,11 @@ i {
 	float: left;
 	font-weight: bolder;
 	padding-left: 10px;
+	padding-top: 5px;
 	font-size: 22px;
 	text-shadow: 0px 0px 18px rgba(0,0,0,0.9);
 	text-decoration: none;
+	color: #0FA0CE;
 }
 
 
@@ -130,13 +145,13 @@ i {
 }
 
 footer {
-color: white;
 text-shadow: 0px 0px 18px rgba(0,0,0,0.9);
 text-align: center;
 position: fixed;
-font-size: 20px;
+font-size: 28px;
 bottom: 0;
 width: 100%;
+color: #991b40;
 }
 
 /*Login Form & Sign Up Form
@@ -149,9 +164,11 @@ width: 100%;
     font-weight: 400;
     /* Size and position */
     width: 400px;
+		height: 250px;
     position: relative;
-    margin: 360px auto 30px;
+    margin: 260px auto 30px;
     padding: 10px;
+
     overflow: hidden;
 
     /* Styles */
@@ -166,7 +183,7 @@ width: 100%;
 .form-3 label {
     /* Size and position */
     width: 50%;
-    float: left;
+    float:inherit;
     padding-top: 9px;
 
     /* Styles */
@@ -184,8 +201,8 @@ width: 100%;
 .form-3 input[type=password] {
     /* Size and position */
     width: 50%;
-    float: left;
-    padding: 8px 5px;
+    float: ;
+    padding: 10px 5px;
     margin-bottom: 10px;
     font-size: 12px;
 
@@ -247,7 +264,8 @@ width: 100%;
 
 .form-3 input[type=submit] {
     /* Width and position */
-    width: 100%;
+		float: left;
+		width: 100%;
     padding: 8px 5px;
 
     /* Styles */
@@ -394,7 +412,7 @@ input, textarea
 ***/
 
 .upload-container {
-	background: url('/app-images/sfgate.jpeg') center center fixed;
+	background: url('/app-images/uploadPic.jpg') center center fixed;
 	background-repeat: no-repeat;
 	background-size: cover;
 	-webkit-background-size: cover;
@@ -446,7 +464,7 @@ margin-right: auto;
 .username {
 	text-align: center;
 	font-weight: bold;
-	color: #4fabc9;
+	color: black;
 }
 
 .comments-comment-text {
