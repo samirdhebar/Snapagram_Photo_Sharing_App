@@ -1,3 +1,4 @@
+
 const express = require("express");
 const User = require("../models/users.js");
 const renderUserTemp = require("../utility/renderauth.js");
@@ -15,12 +16,18 @@ router.get("/signup", function(req, res, error) {
 });
 
 router.post("/signup", function(req, res) {
-	if (req.body.username === "" || req.body.password === "" || req.body.confirmpassword === "") {
+	if (req.body.username === "" || req.body.password === "")
+	// || req.body.confirmpassword === "")
+	{
 		return renderUserTemp(res, "signup", "Signup", {
 			error: "Please fill in all required fields",
 		});
 	}
-	if (req.body.password !== req.body.confirmpassword) {
+
+	// To implement a double password verification password if desired //
+
+
+	if (req.body.password !== req.body.password) {
 		return renderUserTemp(res, "signup", "Signup", {
 			error: "Your password fields do no match",
 		});
