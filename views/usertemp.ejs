@@ -1,0 +1,55 @@
+<!DOCTYPE ejs>
+<html>
+    <head>
+    <title>Snapagram</title>
+
+      <%if (false) {%>
+    <div>
+    	<span>CSS</span>
+    </div>
+    <%}%>
+
+    <meta name="viewport" content="width-device-width, initial scale=1">
+		<link rel="stylesheet" types="text.css" href="/css/cssReset.css">
+    <link rel="stylesheet" types="text.css" href="/css/stylesheet.css">
+    <link rel="stylesheet" types="text.css" href="/css/normalize.css">
+    <link rel="stylesheet" types="text.css" href="/css/skeleton.css">
+	<link rel="icon"
+	type="image/png"
+	href="/app-images/favicon-camera2.png">
+
+    <link rel="stylesheet" types="text.css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
+
+    <body class = "bodytemp" id="back-image">
+
+
+
+
+			<div class = "template">
+		    <div class = "template-header">
+		        <i class="fa fa-camera fa-2x" aria-hidden="true"></i>
+
+		        <div class = "snapagram"><a href="/">Snapagram</a></div>
+
+		          <a href ="/user/signup"><div class = "button" id="signup">Sign Up</div></a>
+		          <a href = "/user/login"><div class= "button" id="login">Login</div></a>
+
+
+      <!-- </nav> -->
+		 </div>
+     </div>
+        <!-- <main class= "template-main"> -->
+			    <%-include("pages/" + page, args);%>
+		    <!-- </main> -->
+
+<!-- Footer
+--------------------------------------------------------->
+
+        <footer>© Copyright 2017 Snapagram</footer>
+
+
+
+</body>
+</html>

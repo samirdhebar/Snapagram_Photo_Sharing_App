@@ -1,9 +1,11 @@
-function renderTemplate(res, title, page, args, links, error) {
+function renderTemplate(res, page, title, args, links, error) {
 	return res.render("template", {
 		page: page,
-		title: title
+		title: title,
 		args: args,
+		error: error,
 	});
 }
+
 
 module.exports = renderTemplate;

@@ -1,6 +1,7 @@
 const express = require("express");
 const User = require("../models/users.js");
 const Photo = require("../models/photos.js");
+const Comment = require("../models/comments.js");
 const renderTemplate = require("../utility/renderTemplate.js");
 const router = express.Router();
 
@@ -84,9 +85,9 @@ router.delete("/photo/:photoId", function(req, res) {
 
 });
 
-
-
-
+router.get('/fizal', (req,res)=>{
+	Photo.findAll({include: [Comment]}).then(arr=> res.json(arr))
+});
 
 
 

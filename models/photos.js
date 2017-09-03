@@ -48,7 +48,7 @@ Photos.prototype.getThumbnailSrc = function() {
 		return filePath;
 	}
 	else {
-		return '/app-images/photomatic.jpg';
+		return '/app-images/sfgate.jpg';
 	}
 };
 
