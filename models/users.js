@@ -3,8 +3,8 @@ const bcrypt = require("bcrypt");
 const Sequelize = require("sequelize");
 const fs = require("fs-extra");
 
-const Photo = require("./photo");
-const Comment = require("./comment");
+const Photos = require("./photos");
+const Comment = require("./comments");
 const path = require("path");
 const Jimp = require("jimp");
 const BodyParser = require("body-parser");
@@ -44,10 +44,10 @@ const User = sql.define("user", {
 	},
 });
 
-User.hasMany(Photo);
+User.hasMany(Photos);
 User.hasMany(Comment);
 Comment.belongsTo(User);
-Photo.belongsTo(User);
+Photos.belongsTo(User);
 
 User.signup = function(req) {
 	return User.create({
