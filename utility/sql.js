@@ -1,12 +1,12 @@
-const sequelize = require("sequelize");
+const Sequelize = require("sequelize");
 
 let sql;
 
 if (process.env.DATABASE_URL) {
-	sql = new sequelize(process.env.DATABASE_URL);
+	sql = new Sequelize(process.env.DATABASE_URL);
 }
 else {
-	sql = new sequelize({
+	sql = new Sequelize({
 		database: process.env.DB_NAME,
 		username: process.env.DB_USER,
 		password: process.env.DB_PASSWORD,
@@ -16,4 +16,5 @@ else {
 		logging: false,
 	});
 }
+
 module.exports = sql;

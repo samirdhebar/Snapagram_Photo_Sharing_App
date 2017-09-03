@@ -1,8 +1,9 @@
-.env
 node_modules/
-.DS_Store
-*.log
-assets/files/*
+.DS_Store,*.temp
+npm-debug.log, *.log
+.env
+uploads/
 assets/previews/*
 assets/thumbnails/*
+assets/files/*
 assets/uploads/*

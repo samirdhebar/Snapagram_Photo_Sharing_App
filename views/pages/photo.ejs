@@ -1,0 +1,71 @@
+<!DOCTYPE ejs>
+<link rel="stylesheet" types="text.css" href="/css/normalize.css">
+<link rel="stylesheet" types="text.css" href="/css/skeleton.css">
+<link rel="stylesheet" types="text.css" href="/css/stylesheet.css">
+
+
+
+<div class="full-photo">
+
+
+    <img class="photo-full" src="<%- photo.getPreviewSrc() %>"/>
+		<div class="container description-container">
+      <% if (photo.userId === args.id) { %>
+			    <form class="edit" name = "update" action= "/photo/update/<%- photo.get("id") %>"   method="POST">
+            <button class="edit-button button">Update Description</button>
+            <textarea class=  "photo-description-edit" name = "update"> <%- photo.get("description") %></textarea>
+          </form>
+        <% } else { %>
+				<p class=  "photo-description"> <%- photo.get("description") %></p>
+				<% } %>
+
+		</div>
+</div>
+
+
+<div class="container">
+	<div class="nine column">
+		<div class = "userexp">
+
+			<% if (photo.userId === args.id) { %>
+			<a class="delete-button button" name="delete" data-photoid="<%- photo.get("id") %>">REMOVE PHOTO</a>
+			<% } %>
+
+            <form id = "btn like" method= "POST" action= "/photo/like/<%- photo.get("id") %>">
+                <input name="photoid" type="hidden" value="<%- photo.get("id") %>"/>
+                    <button class = "photo-like">
+                    <span class= "likes fa fa-heart"> <%- likes %></span>
+                    </button>
+            </form>
+
+            <a href = "/photo/comment/<%- photo.get("id") %>"><button class="comment">Comment</button></a>
+</div>
+	</div>
+		</div>
+
+
+
+
+    <% if (comments && comments.length) { %>
+     <% for (let i = 0; i < comments.length; i++) { %>
+         <div class="comments-comment">
+
+            <div class ="username">
+             <b><font color="#4fabc9"><%= comments[i].user.get("username") %> says:</font></b>
+            </div>
+
+             <div class="comments-comment-text">
+                 <%- comments[i].get("text") %>
+             </div>
+         </div>
+     <% } %>
+ <% } else { %>
+     <p class="comments-empty">No comments here!</p>
+ <% } %>
+
+<script src="/js/delete.js"></script>
+<script src="/js/descriptionUpdate.js"></script>
+
+</div>
+	</div>
+</div>

@@ -1,0 +1,11 @@
+
+
+<div class = "photos">
+
+<p>
+	<% for (let i = 0; i < photos.length; i++) { %>
+		<a href = "/photo/photo/<%- photos[i].get('id') %>">
+			<img class= "gallery-image" src  ="<%- photos[i].getThumbnailSrc() %>"/></a>
+
+	<% } %>
+</p>
