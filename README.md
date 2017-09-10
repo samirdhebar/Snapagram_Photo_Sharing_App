@@ -196,6 +196,8 @@ installed, there is only one command:
 ## Inspiration:
 * [Instagram](https://www.instagram.com)
 
+## Heroku Deployment
+* To view the site without downloading locally, browse the site hosted on [Heroku](https://snapagram-heroku.herokuapp.com/)
 
 ## Contribute
 
