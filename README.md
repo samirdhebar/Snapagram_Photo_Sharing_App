@@ -3,6 +3,13 @@
 # Snapagram --- Photo Sharing Application [![MIT license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/samirdhebar/photo-sharing-app/master/LICENSE.md)
 A group project between [Samir Dhebar](https://github.com/samirdhebar) and [Gabe Arnold](https://github.com/GabeSArn). A photo sharing application that allows users to comment on, like and upload pictures.
 
+## Deployment
+* To view the site without downloading locally, browse the site hosted on [Heroku](https://snapagram-heroku.herokuapp.com/)
+
+<p style="text-align: center;">
+	<img src= "https://media.giphy.com/media/l2Rns2Khibtj0em2Y/giphy.gif" width="900">
+</p>
+
 ## Installation Instructions
 You must be on a Node version greater than 6 to use this. Once you've npm
 installed, there is only one command:
@@ -195,9 +202,6 @@ installed, there is only one command:
 
 ## Inspiration:
 * [Instagram](https://www.instagram.com)
-
-## Heroku Deployment
-* To view the site without downloading locally, browse the site hosted on [Heroku](https://snapagram-heroku.herokuapp.com/)
 
 ## Contribute
 
